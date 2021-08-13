@@ -60,7 +60,7 @@ S Y S T E M    I N F O
 ${hr}
 Host:$alignr$nodename
 Uptime:$alignr$uptime
-RAM:$alignr$mem/$memmax
+RAM:$alignr${exec free -h --si | awk 'NR==2{printf "%s/%s",$3,$2}'; free -m | awk 'NR==2{printf" %u%%\n",$3*100/$2 }'}
 Swap usage:$alignr$swap/$swapmax
 Root usage:$alignr${fs_used /} / ${fs_size /}
 Home usage:$alignr${fs_used /home} / ${fs_size /home}
