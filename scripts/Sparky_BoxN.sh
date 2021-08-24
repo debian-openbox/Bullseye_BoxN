@@ -18,13 +18,7 @@ sudo ./non-free.sh
 
 sudo apt-get update
 
-sudo apt install -y xorg lightdm openbox obconf tint2 lxappearance menu bleachbit mpd ncmpcpp geany synaptic doublecmd-common terminator rxvt-unicode ranger 
-sudo apt install -y ttf-mscorefonts-installer qbittorrent --no-install-recommends
-sudo apt install -y pcmanfm-qt --no-install-recommends
-
-sudo apt-get install -y micro firmware-linux firmware-linux-nonfree firmware-misc-nonfree
-
-sudo apt-get install -y mousepad apt-rdepends compton compton-conf firefox-esr xsel mirage pulseaudio numlockx pavucontrol mlocate vlc arandr apt-file xutils mesa-utils xarchiver htop sysstat acpi hardinfo hddtemp network-manager network-manager-gnome net-tools nmap dnsutils libglu1-mesa xfburn gnome-disk-utility python3-pip fonts-ubuntu fonts-ubuntu-console suckless-tools simplescreenrecorder gdebi fbxkb mpv curl gmrun xscreensaver galternatives pnmixer sxiv scrot xsettingsd git wmctrl pm-utils arc-theme numix-icon-theme nitrogen policykit-1-gnome udiskie psmisc flameshot package-update-indicator qt5-style-plugins xdotool
+sudo apt install -y  mpd ncmpcpp geany terminator nmap net-tools libglu1-mesa fbxkb mpv mlocate vlc apt-file xutils mesa-utils dnsutils xfburn simplescreenrecorder htop apt-rdepends compton compton-conf firefox-esr xsel numlockx sysstat acpi hardinfo hddtemp gnome-disk-utility python3-pip fonts-ubuntu fonts-ubuntu-console suckless-tools sxiv xsettingsd git wmctrl arc-theme oxygen-icon-theme psmisc flameshot package-update-indicator && sudo apt install -y ttf-mscorefonts-installer && sudo apt install -y qbittorrent  --no-install-recommends pcmanfm-qt --no-install-recommends
 
 cp -Rp ~/Sparky_BoxN/.config ~/
 
@@ -36,7 +30,7 @@ sudo cp -p ~/Sparky_BoxN/rs.png /usr/share/fbxkb/images/rs.png
 
 sudo cp ~/Sparky_BoxN/ncmpcpp_48x48.png /usr/share/icons
 
-#sudo chmod 777 /usr/share/icons/ncmpcpp_48x48.png
+#sudo chmod 755 /usr/share/icons/ncmpcpp_48x48.png
 
 
 # korekcija autorizacije za gdebi
@@ -81,19 +75,6 @@ cp -p ~/Sparky_BoxN/scripts/reinstall_youtube-dl.sh ~/.scripts
 # cd ~/.scripts
 # sudo ./settings_geany
 
-## obmenu-generator
-cp -p ~/Sparky_BoxN/scripts/obmenu-generator.sh ~/.scripts
-
-# mkdir ~/projects
-# cd ~/projects
-# git clone https://github.com/speja969/debian-openbox.git
-
-# cd ~/projects/debian-openbox/10_openbox_terminator
-# sudo ./install.sh
-
-# cd ~/projects/debian-openbox/10_openbox_arc-theme-gtk
-# sudo ./install.sh
-
 # cd ~/projects/debian-openbox/10_openbox_numix-paper-icons
 # sudo ./install.sh
 
@@ -105,7 +86,7 @@ cd /home/$(logname)/Sparky_BoxN/scripts/
 sudo ./install_missing_wps_fonts.sh
 
 # dt-dark-theme
-cp -pR /home/$(logname)/Sparky_BoxN/.themes /home/$(logname)/
+# cp -pR /home/$(logname)/Sparky_BoxN/.themes /home/$(logname)/
 
 
 # cd ~/projects/debian-openbox/10_openbox_conky
@@ -156,9 +137,6 @@ sudo sed -i "s/^.*Exec=ranger.*$/$(cat /tmp/ranger_replacement)/" /usr/share/app
 
 sudo sed -i 's!Terminal=true!Terminal=false!' /usr/share/applications/ranger.desktop
 
-mkdir -p ~/.urxvt/ext
-cp -p ~/Sparky_BoxN/ext/* ~/.urxvt/ext/
-sudo update-alternatives --install /usr/bin/x-terminal-emulator x-terminal-emulator /usr/bin/urxvtc 50
 sudo update-alternatives --set x-terminal-emulator /usr/bin/terminator
 
 cd ~/Sparky_BoxN/scripts/openbox_conky
