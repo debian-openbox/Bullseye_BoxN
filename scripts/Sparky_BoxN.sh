@@ -13,8 +13,8 @@ find ~/Sparky_BoxN -type d -exec chmod 755 {} \;
 find ~/Sparky_BoxN -type f -exec chmod 755 {} \;
 
 #sudo apt-get install -y software-properties-common && sudo apt-add-repository contrib && sudo apt-add-repository non-free
-cd ~/Sparky_BoxN/scripts
-sudo ./non-free.sh
+#cd ~/Sparky_BoxN/scripts
+#sudo ./non-free.sh
 
 sudo apt-get update
 
