@@ -139,6 +139,9 @@ sudo sed -i 's!Terminal=true!Terminal=false!' /usr/share/applications/ranger.des
 
 sudo update-alternatives --set x-terminal-emulator /usr/bin/terminator
 
+# replace thunar with pcmanfm-qt
+sed -i '/thunar --daemon &/c\pcmanfm-qt --desktop &' ~/.config/openbox/autostart.sh
+
 cd ~/Sparky_BoxN/scripts/openbox_conky
 sudo ./install.sh
 
