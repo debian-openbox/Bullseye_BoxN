@@ -1,7 +1,9 @@
+#! /bin/bash
 
-## GNOME PolicyKit and Keyring
-/usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1 &
-#eval $(gnome-keyring-daemon -s --components=pkcs11,secrets,ssh,gpg) &
+#annoying beep no more
+xset b off &
+### polkit agent
+sparky-polkit &
 
 nitrogen --restore &
 
@@ -13,12 +15,24 @@ tint2 &
 
 fbxkb &
 
-urxvtd -q &
+### networkmanager tray applet
+if [ -f /opt/sparky/nm-applet-reload ]; then
+/opt/sparky/nm-applet-reload &
+fi
+### power manager - particularly important for laptop users
+if [ -f /usr/bin/xfce4-power-manager ]; then
+/usr/bin/xfce4-power-manager &
+fi
+### creates a full suite of localized default user directories within the $HOME directory
+if [ -f /usr/bin/xdg-user-dirs-update ]; then
+/usr/bin/xdg-user-dirs-update &
+fi
 
 #~/conkystartup.sh
 sleep 10 && /usr/bin/conky-session &
 
-pnmixer &
+### audio tray applet
+sleep 5 && pnmixer &
 
 udiskie &
 
