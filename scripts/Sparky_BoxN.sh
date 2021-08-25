@@ -144,7 +144,7 @@ sudo update-alternatives --set x-terminal-emulator /usr/bin/terminator
 
 # replace thunar with pcmanfm-qt
 #sed -i '/thunar --daemon &/c\pcmanfm-qt --desktop &' ~/.config/openbox/autostart.sh
-sed -i 's!sparky-fileopen!pcmanfm-qt!' ~/.config/jgmenu/prepend.cvs
+sed -i 's!sparky-fileopen!pcmanfm-qt!' ~/.config/jgmenu/prepend.csv
 
 
 
