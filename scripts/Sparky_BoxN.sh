@@ -131,19 +131,19 @@ sudo sed -i "s/^.*Exec=htop.*$/$(cat /tmp/htop_replacement)/" /usr/share/applica
 
 sudo sed -i 's!Terminal=true!Terminal=false!' /usr/share/applications/htop.desktop
 
-echo "Exec=x-terminal-emulator -T 'ranger task manager' -e ranger" > /tmp/ranger_replacement
+#echo "Exec=x-terminal-emulator -T 'ranger task manager' -e ranger" > /tmp/ranger_replacement
 
-sudo sed -i "s/^.*Exec=ranger.*$/$(cat /tmp/ranger_replacement)/" /usr/share/applications/ranger.desktop
+#sudo sed -i "s/^.*Exec=ranger.*$/$(cat /tmp/ranger_replacement)/" /usr/share/applications/ranger.desktop
 
-sudo sed -i 's!Terminal=true!Terminal=false!' /usr/share/applications/ranger.desktop
+#sudo sed -i 's!Terminal=true!Terminal=false!' /usr/share/applications/ranger.desktop
 
-sudo sed -i 's!Icon=pnmixer!Icon=/usr/share/icons/Arc-Darkest-Suru/categories/16/pnmixer.svg!' /usr/share/applications/pnmixer.desktop
-sudo sed -i 's!Icon=nm-device-wireless!Icon=/usr/share/icons/Arc-Darkest-Suru/categories/16/networkmanager.svg!' /usr/share/applications/nm-applet.desktop
+#sudo sed -i 's!Icon=pnmixer!Icon=/usr/share/icons/Arc-Darkest-Suru/categories/16/pnmixer.svg!' /usr/share/applications/pnmixer.desktop
+#sudo sed -i 's!Icon=nm-device-wireless!Icon=/usr/share/icons/Arc-Darkest-Suru/categories/16/networkmanager.svg!' /usr/share/applications/nm-applet.desktop
 
 sudo update-alternatives --set x-terminal-emulator /usr/bin/terminator
 
 # replace thunar with pcmanfm-qt
-sed -i '/thunar --daemon &/c\pcmanfm-qt --desktop &' ~/.config/openbox/autostart.sh
+#sed -i '/thunar --daemon &/c\pcmanfm-qt --desktop &' ~/.config/openbox/autostart.sh
 
 cd ~/Sparky_BoxN/scripts/openbox_conky
 sudo ./install.sh
