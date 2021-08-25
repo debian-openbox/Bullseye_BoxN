@@ -18,7 +18,7 @@ find ~/Sparky_BoxN -type f -exec chmod 755 {} \;
 
 sudo apt-get update
 
-sudo apt install -y  mpd ncmpcpp geany terminator nmap net-tools libglu1-mesa balena-etcher-electron fbxkb mpv mlocate vlc apt-file xutils mesa-utils dnsutils xfburn simplescreenrecorder htop apt-rdepends compton compton-conf firefox-esr xsel numlockx sysstat acpi hardinfo hddtemp gnome-disk-utility python3-pip suckless-tools sxiv xsettingsd git wmctrl oxygen-icon-theme psmisc flameshot sparky-aptus-upgrade-checker pcmanfm-qt && sudo apt install -y ttf-mscorefonts-installer && sudo apt install -y qbittorrent  --no-install-recommends 
+sudo apt install -y  mpd ncmpcpp geany terminator nmap net-tools libglu1-mesa balena-etcher-electron fbxkb mpv mlocate vlc apt-file xutils mesa-utils dnsutils xfburn simplescreenrecorder htop apt-rdepends compton compton-conf firefox-esr xsel numlockx sysstat acpi hardinfo hddtemp gnome-disk-utility python3-pip suckless-tools sxiv xsettingsd git wmctrl oxygen-icon-theme psmisc flameshot sparky-aptus-upgrade-checker && sudo apt install -y ttf-mscorefonts-installer && sudo apt install -y qbittorrent  --no-install-recommends && sudo apt install -y pcmanfm-qt --no-install-recommends
 
 cp -Rp ~/Sparky_BoxN/.config ~/
 
