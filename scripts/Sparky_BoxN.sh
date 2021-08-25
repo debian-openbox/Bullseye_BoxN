@@ -137,6 +137,9 @@ sudo sed -i "s/^.*Exec=ranger.*$/$(cat /tmp/ranger_replacement)/" /usr/share/app
 
 sudo sed -i 's!Terminal=true!Terminal=false!' /usr/share/applications/ranger.desktop
 
+sudo sed -i 's!Icon=multimedia-volume-control!Icon=/usr/share/icons/Arc-Darkest-Suru/categories/16/pavucontrol.svg!' /usr/share/applications/pavucontrol.desktop
+sudo sed -i 's!Icon=nm-device-wireless!Icon=/usr/share/icons/Arc-Darkest-Suru/categories/16/networkmanager.svg!' /usr/share/applications/nm-applet.desktop
+
 sudo update-alternatives --set x-terminal-emulator /usr/bin/terminator
 
 # replace thunar with pcmanfm-qt
