@@ -28,7 +28,7 @@ cp -p ~/Sparky_BoxN/keyboard.sh ~/
 
 sudo cp -p ~/Sparky_BoxN/rs.png /usr/share/fbxkb/images/rs.png
 
-sudo cp ~/Sparky_BoxN/ncmpcpp_48x48.png /usr/share/icons
+sudo cp ~/Sparky_BoxN/ncmpcpp.svg /usr/share/icons
 
 #sudo chmod 755 /usr/share/icons/ncmpcpp_48x48.png
 
